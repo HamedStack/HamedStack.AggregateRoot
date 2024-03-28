@@ -7,10 +7,6 @@ public class SingleValueObject<T> : ValueObject
     {
 
     }
-    public SingleValueObject(T value)
-    {
-        Value = value;
-    }
 
     public static implicit operator T(SingleValueObject<T> valueObject)
     {
@@ -19,7 +15,7 @@ public class SingleValueObject<T> : ValueObject
 
     public static implicit operator SingleValueObject<T>(T value)
     {
-        return new SingleValueObject<T>(value);
+        return new SingleValueObject<T>() { Value = value };
     }
 
     public T Value { get; set; } = default!;

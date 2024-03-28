@@ -8,7 +8,7 @@
 		<Authors>Hamed Fathi</Authors>
 		<Company />
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<RootNamespace>HamedStack.TheAggregateRoot</RootNamespace>
 		<LangVersion>latest</LangVersion>
 		<PackageProjectUrl>https://github.com/HamedStack/HamedStack.AggregateRoot</PackageProjectUrl>
