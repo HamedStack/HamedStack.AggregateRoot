@@ -33,7 +33,7 @@ public abstract class Entity<TId> : IIdentifier<TId>, IDomainEvent
     /// <summary>
     /// Gets or sets the identifier for the entity.
     /// </summary>
-    public TId Id { get; }
+    public TId Id { get; set; }
 
     private readonly List<DomainEvent> _domainEvents = new();
     /// <summary>
