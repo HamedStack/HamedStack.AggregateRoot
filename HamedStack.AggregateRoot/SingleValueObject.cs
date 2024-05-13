@@ -37,16 +37,6 @@ public class SingleValueObject<T> : ValueObject
     }
 
     /// <summary>
-    /// Allows implicit conversion from T to SingleValueObject&lt;T&gt;.
-    /// </summary>
-    /// <param name="value">The value to encapsulate.</param>
-    /// <returns>A new instance of SingleValueObject encapsulating the specified value.</returns>
-    public static implicit operator SingleValueObject<T>(T value)
-    {
-        return new SingleValueObject<T>(value);
-    }
-
-    /// <summary>
     /// Gets or sets the value encapsulated by this object.
     /// </summary>
     public T Value { get; set; } = default!;
