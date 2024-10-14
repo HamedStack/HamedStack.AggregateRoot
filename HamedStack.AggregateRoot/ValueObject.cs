@@ -1,9 +1,18 @@
 ﻿namespace HamedStack.TheAggregateRoot;
 
+/// <summary>
+/// Represents a base class for value objects. 
+/// Value objects are objects that do not have a unique identity and are 
+/// defined by their attributes. They support equality checks based on 
+/// their attribute values instead of their reference in memory.
+/// </summary>
 [Serializable]
-public abstract class ValueObject
+public abstract class ValueObject : IComparable, IComparable<ValueObject>
 {
-    protected ValueObject(){}
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ValueObject"/> class.
+    /// </summary>
+    protected ValueObject() { }
 
     /// <summary>
     /// Gets the components that should be used for equality checks.
