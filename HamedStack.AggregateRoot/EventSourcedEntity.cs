@@ -52,7 +52,7 @@ public abstract class EventSourcedEntity<TId> : Entity<TId> where TId : notnull
     /// <param name="e">The domain event to apply.</param>
     protected void ApplyChange(DomainEvent e)
     {
-        e.Version = Version + 1;
+        e.EventVersion = Version + 1;
         ApplyChange(e, true);
     }
 
@@ -82,7 +82,7 @@ public abstract class EventSourcedEntity<TId> : Entity<TId> where TId : notnull
         foreach (var e in history)
         {
             ApplyChange(e, false);
-            Version = e.Version;
+            Version = e.EventVersion;
         }
     }
 }

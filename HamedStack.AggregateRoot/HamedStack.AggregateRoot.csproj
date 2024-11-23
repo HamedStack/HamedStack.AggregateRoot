@@ -8,7 +8,7 @@
 		<Authors>Hamed Fathi</Authors>
 		<Company />
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<RootNamespace>HamedStack.TheAggregateRoot</RootNamespace>
 		<LangVersion>latest</LangVersion>
 		<PackageProjectUrl>https://github.com/HamedStack/HamedStack.AggregateRoot</PackageProjectUrl>
@@ -21,7 +21,7 @@
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
 </Project>

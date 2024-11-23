@@ -26,13 +26,13 @@ public class DomainEvent : INotification
     /// Gets the unique identifier for the event. 
     /// A new GUID is generated each time this property is accessed.
     /// </summary>
-    public Guid Id => Guid.NewGuid();
+    public Guid EventId => Guid.NewGuid();
 
     /// <summary>
     /// Gets or sets the version of the event, indicating its order in the sequence of events.
     /// The default value is 0.
     /// </summary>
-    public int Version { get; set; } = 0;
+    public int EventVersion { get; set; } = 0;
 
     /// <summary>
     /// Gets the name of the event type, which is the name of the class that implements this event.
@@ -49,7 +49,7 @@ public class DomainEvent : INotification
     /// Gets the date and time when the event occurred, in UTC.
     /// This property is set to the current time at the moment of access.
     /// </summary>
-    public DateTimeOffset DateOccurred => DateTimeOffset.UtcNow;
+    public DateTimeOffset EventDateOccurred => DateTimeOffset.UtcNow;
 }
 
 
