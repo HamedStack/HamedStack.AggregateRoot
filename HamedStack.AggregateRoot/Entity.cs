@@ -8,7 +8,7 @@ namespace HamedStack.TheAggregateRoot;
 /// Represents the base entity for domain entities.
 /// </summary>
 /// <typeparam name="TId">The type of the entity identifier.</typeparam>
-public abstract class Entity<TId> : IIdentifier<TId>, IDomainEventManager
+public abstract class Entity<TId> : IIdentifier<TId>, IDomainEvent
     where TId : notnull
 {
     private int _requestedHashCode = int.MinValue;
